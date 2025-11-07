@@ -1,0 +1,4 @@
+/*    /Index.html   200
+/contact   /contact.html   200
+/pricing   /pricing.html   200
+# These rules ensure pretty routes resolve to the correct HTML on Netlify

@@ -1,0 +1,36 @@
+:root{
+  --focus: rgba(37,99,235,0.12);
+  --primary:#2563eb;
+  --secondary:#7e22ce;
+  --muted:#64748b;
+}
+
+/* Base */
+*{box-sizing:border-box}
+body{margin:0}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* Section title underline */
+.section-title{position:relative;margin-bottom:1rem}
+.section-title:after{content:'';position:absolute;bottom:-10px;left:0;width:60px;height:4px;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:2px}
+
+/* Focus states */
+a:focus,button:focus,input:focus,textarea:focus{outline:3px solid var(--focus);outline-offset:2px;border-radius:8px}
+
+/* Reveal animation helpers */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in-view{opacity:1;transform:none}
+
+/* Mobile layout adjustments */
+@media (max-width:480px){
+  .cta-actions{gap:8px;flex-wrap:wrap}
+  .btn{width:100%}
+  .header-inner{padding:10px}
+}
+
+/* Popular badge responsive */
+.popular-badge{display:inline-block;padding:6px 12px;border-radius:20px;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary))}
+
+/* Reduced motion respect */n@media (prefers-reduced-motion:reduce){
+  .auto-animate,.reveal{animation:none!important;transition:none!important}
+}
